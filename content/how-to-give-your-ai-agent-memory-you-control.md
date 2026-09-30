@@ -1,6 +1,6 @@
 ---
-title: "How to give your AI agent persistent memory: a step-by-step OneDroid Engram setup"
-description: Seven steps to give an AI agent memory that outlives the session, using OneDroid Engram. Set up a namespace and a scoped token, connect an MCP client, and prove that a new session can find what an earlier one wrote.
+title: "How to give your AI agent memory you fully control, with no vendor lock-in"
+description: Seven steps to give Claude Code or any MCP client a memory that outlives the session, stored in your own Postgres or Supabase if you want it there. Ends with a test where a new session finds what an earlier one wrote.
 date: 2026-10-01
 author: OneDroid
 tags: memory, engram, how-to
@@ -17,6 +17,17 @@ The store is OneDroid Engram. Its documentation is at [docs.onedroid.ai](https:/
 - A OneDroid account. You sign in with Google or an email address. It is the same account you use for OneDroid Synapse. OneDroid Engram is free for individuals and small teams.
 - An MCP client that speaks streamable HTTP and can send a header.
 - `curl`, for the connection check.
+
+## Optional, first: keep the memory in your own database
+
+By default the memory is stored for you. If you want it in a Postgres you own, such as Supabase or Neon, switch before you write anything. In the OneDroid Engram web app, open **Database** and click **Switch to BYOD**:
+
+1. In Supabase, open your project, then **Connect**, then **Transaction pooler**, and copy the **URI**. Any PostgreSQL 15 or later works.
+2. Paste it, and type the database password separately. It replaces `[YOUR-PASSWORD]` in the string.
+3. Click **Test Connection**. You should see `Connected (pgvector OK)`. `Connected (pgvector missing!)` means the vector extension is not available in that database.
+4. Once the test succeeds, register the database with the button that appears.
+
+What moves to your database and what does not is listed under [bring your own database](https://docs.onedroid.ai/engram#bring-your-own-database).
 
 ## Steps
 
