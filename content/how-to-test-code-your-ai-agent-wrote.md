@@ -1,16 +1,20 @@
 ---
-title: The tests your coding agent never sees
-description: A coding agent that writes the code and the tests is grading its own homework. On 24 September 2026, test cases withheld from our coding agents found two bugs in code whose visible tests were all green. What holdout testing is, how to start, and what it does not prove.
+title: "How to test code your AI agent wrote: 5 steps"
+description: Five steps for testing code a coding agent wrote, using test cases the agent never sees. They come from the day this method found two bugs in our own build while every visible test was green. Includes what the method does not prove.
 date: 2026-09-30
 author: OneDroid
-tags: testing, coding agents, holdout, verification
+tags: testing, coding agents, holdout, how-to
 ---
+
+This is a five-step method for testing code written by a coding agent. It needs no new tool: a folder the agent cannot read, and the discipline to run one check once. The steps are further down. First, why the tests you already have are not enough, and the day that showed us.
+
+## The problem: the agent is grading its own homework
 
 A common definition of done with coding agents: the agent wrote the code, the agent wrote the tests, the tests are green. That is not a test result. It is the agent agreeing with itself.
 
-We are not saying agent-written tests are useless. We are saying they measure the wrong thing. They tell you the code does what the agent thought of. The bugs that reach production live in what it did not think of.
+Agent-written tests are not useless. They measure the wrong thing. They tell you the code does what the agent thought of. The bugs that reach production live in what it did not think of.
 
-## What happened on 24 September
+## What happened on 24 September 2026
 
 Our coding agents build one of our MCP tools, the one that turns text into narrated video. Part of its acceptance cases is withheld from them: the agents that write the code never see those cases.
 
@@ -23,21 +27,19 @@ Both are fixed: the bad text is now refused at the gateway with an error that sa
 
 Neither bug is exotic. Both are the kind a careful reviewer would ask about. The visible tests did not ask, because the code and its tests came from the same understanding of the problem. Whatever that understanding missed in one, it missed in the other.
 
-That is the whole argument. One tool, one day, two bugs, found by cases the builder never saw. It is not a study and we will not dress it up as one.
+One tool, one day, two bugs, found by cases the builder never saw. It is not a study and we will not dress it up as one.
 
-## What "holdout" means
+## The 5 steps
 
-The term comes from machine learning: you do not grade a model on the examples it trained on. The same rule applies to a coding agent. If it has read the acceptance cases, passing them proves it can satisfy text it has read. If it has not, passing them is evidence about the system.
+The name for this is a holdout, and it comes from machine learning: you do not grade a model on the examples it trained on. If a coding agent has read the acceptance cases, passing them proves it can satisfy text it has read. If it has not, passing them is evidence about the system.
 
-In practice:
-
-1. **Write the acceptance cases before the code.** Happy path, the repeat, the wrong actor, the wrong state, every external call failing.
-2. **Split them.** The builder gets enough to understand the job. The rest is withheld.
+1. **Write the acceptance cases before the code.** Cover the happy path, the repeat, the wrong actor, the wrong state, and every external call failing.
+2. **Split them.** The builder gets enough cases to understand the job. The rest is withheld.
 3. **Keep the withheld cases where the agent's session cannot read them.** Not a folder it is asked to ignore: a place it has no access to.
 4. **Run them once, against the finished build.** During the build the agent may learn that a withheld case failed and what the system actually did. It does not learn what was expected.
-5. **After the verdict, publish them.** A case the builder has now seen is a regression test. It stops being a holdout, so write new ones for the next change.
+5. **After the verdict, publish them and write new ones.** A case the builder has now seen is a regression test. It has stopped being a holdout.
 
-## What it does not prove
+## What this does not prove
 
 Withheld cases miss things too. They are written by people, from the same requirements, with the same blind spots as any test plan.
 
@@ -47,7 +49,7 @@ And "withheld" is only as strong as its custody. If the agent can read the folde
 
 This method is what [OneDroid Argus](https://onedroid.ai/argus) packages: the scenario set is sealed and its hash anchored before the build, run against a pinned artefact the coding agent never tested it on, and revealed in full after the verdict so anyone can replay it. Every scenario ends as passed, failed, or harness error, and a harness error is never a pass.
 
-Argus is in early access and its runner is not published yet. The method does not wait for it. The five steps above need a folder the agent cannot read and the discipline to run the check once.
+OneDroid Argus is in early access and its runner is not published yet. The method does not wait for it: the five steps above work today.
 
 A green run from the builder is a claim. The part of the job that stays with you is deciding what "done" means before the code exists, and not calling it done until something the builder never saw says so.
 
