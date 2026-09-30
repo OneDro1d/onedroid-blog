@@ -1,6 +1,6 @@
 ---
-title: How to make your MCP servers portable across AI clients
-description: Eight steps to connect your MCP tools once with OneDroid Synapse and reach the same tools from Claude Code and from Claude Desktop or claude.ai. Includes a check to rerun whenever a client stops seeing them.
+title: How to configure your MCP servers once for Claude Code, Claude.ai and ChatGPT
+description: Eight steps to set up your MCP tools and credentials in one place and reach them from Claude Code, Claude Desktop and claude.ai, with the same setup offered for ChatGPT, Cursor and VS Code. Includes a check to rerun whenever a client stops seeing them.
 date: 2026-10-02
 author: OneDroid
 tags: mcp, synapse, how-to
@@ -92,7 +92,7 @@ https://synapse.onedroid.ai/hub/<your-slug>/mcp
 
 Put your real slug in, suffix included. In Claude, open **Settings → Connectors**, choose to add a custom connector, and paste the URL. A consent screen opens in your browser. Approve it.
 
-If your client asks for a Client ID and Secret, use **Generate credentials** on the **AI Clients** page and paste them into the client.
+If your client asks for a Client ID and Secret, use **Generate credentials** on the **AI Clients** page and paste them into the client. The same page carries instructions for Claude.ai, Cursor, VS Code and ChatGPT, credential presets for Claude, ChatGPT and a generic client, and an OpenAPI spec URL for clients like ChatGPT.
 
 ### 8. Check that it worked
 
