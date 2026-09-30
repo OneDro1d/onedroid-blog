@@ -170,12 +170,15 @@ test('zero published posts: builds, says no posts yet', () => {
   assert.equal(run(fx, ['--check']).status, 0);
 });
 
-test('the committed placeholder draft builds to zero posts', () => {
+test('the committed placeholder draft is valid and never published', () => {
+  // Build the real content directory (which now holds real posts) and check only what this test is about:
+  // the draft passes validation and appears in no output.
   const fx = { content: join(REPO, 'content'), out: mkdtempSync(join(tmpdir(), 'blog-out-')) };
   const r = run(fx);
   assert.equal(r.status, 0, r.stderr);
-  assert.ok(read(fx, 'blog/index.html').includes('No posts yet.'));
   assert.ok(!existsSync(join(fx.out, 'blog/hello-blog.md')));
+  assert.ok(!existsSync(join(fx.out, 'blog/hello-blog.html')));
+  assert.ok(!read(fx, 'blog/index.html').includes('hello-blog'));
 });
 
 test('build fails, naming file and field, on missing required frontmatter', () => {
