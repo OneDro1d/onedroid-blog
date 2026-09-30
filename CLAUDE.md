@@ -3,7 +3,7 @@
 **`AGENTS.md` is the house rules for this repo — read it first.** This file does not restate them beyond the two
 that must never be missed; two homes for one rule is how a correction reaches one and not the other.
 
-Posts and changes reach `main` only through a pull request. Agents open pull requests; agents never merge them and never push to `main`. Only Michal merges.
+Posts and changes reach `main` only through a pull request, and nobody pushes to `main`. A post's pull request is proposed to Michal in Slack with a link and a rendered preview. If he has not said no by the post's publishing slot, the agent that runs OneDroid's social accounts merges it (Michal, 30 September 2026). Any other change to this repository waits for Michal.
 
 Every factual claim in a post needs a source the reader can check; never invent numbers, quotes, customers or results.
 
