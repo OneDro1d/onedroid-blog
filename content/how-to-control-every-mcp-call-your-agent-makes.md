@@ -1,6 +1,6 @@
 ---
-title: How to track every MCP tool call your AI agents make
-description: Ten steps to a log that names who called which MCP tool and when, using OneDroid Synapse. Ends with a test call you make yourself and find in the log, and a plain list of what the log does not give you.
+title: How to be in control of every MCP call your AI agent makes
+description: Ten steps to see and control every tool call Claude Code or any MCP client makes: one gateway, one log of who called which tool and when, and a switch to turn a tool off. Ends with a test call you find in the log yourself.
 date: 2026-10-03
 author: OneDroid
 tags: mcp, audit log, governance, how-to
