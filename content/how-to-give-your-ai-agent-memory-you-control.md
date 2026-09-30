@@ -1,7 +1,7 @@
 ---
 title: "How to give your AI agent memory you fully control, with no vendor lock-in"
 description: Seven steps to give Claude Code or any MCP client a memory that outlives the session, stored in your own Postgres or Supabase if you want it there. Ends with a test where a new session finds what an earlier one wrote.
-date: 2026-10-01
+date: 2026-09-30
 author: OneDroid
 tags: memory, engram, how-to
 ---

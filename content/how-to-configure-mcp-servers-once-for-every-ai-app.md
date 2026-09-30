@@ -1,7 +1,7 @@
 ---
 title: How to configure your MCP servers once for Claude Code, Claude.ai and ChatGPT
 description: Eight steps to set up your MCP tools and credentials in one place and reach them from Claude Code, Claude Desktop and claude.ai, with the same setup offered for ChatGPT, Cursor and VS Code. Includes a check to rerun whenever a client stops seeing them.
-date: 2026-10-02
+date: 2026-09-30
 author: OneDroid
 tags: mcp, synapse, how-to
 ---
