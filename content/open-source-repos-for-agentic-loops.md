@@ -1,7 +1,7 @@
 ---
 title: 5 best open-source repos for running agentic coding loops
 description: Five open-source repositories you can run today for agentic coding loops, each covering a different angle, with licence, stars, last push and one documented weakness per project. One of them is OneDroid's own.
-date: 2026-10-06
+date: 2026-09-30
 author: OneDroid
 tags: agentic loops, open source, coding agents, list
 ---
