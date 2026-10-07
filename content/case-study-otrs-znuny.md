@@ -43,7 +43,7 @@ What stayed the same is just as useful to know: error messages, customer permiss
 
 Number 6 is the one to look at twice. The old release was the reference, and the old release is the one that gets it wrong. A comparison that only asks "does the new system behave like the old one?" would have reported the new release's correct behaviour as a regression, and a team could have spent time "fixing" the improvement away.
 
-Argus could see this because a check can state what is right for every system, the old one included, instead of treating the old system as right by definition.
+OneDroid Argus could see this because a check can state what is right for every system, the old one included, instead of treating the old system as right by definition.
 
 ## What it cost
 
