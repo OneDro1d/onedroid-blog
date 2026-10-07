@@ -1,7 +1,7 @@
 ---
 title: "Before you put an AI agent in front of trading data: what one test found in a FINOS CALM demo"
 description: A case study for product owners and leaders. Seven checks, sealed before the run, asked whether an open source demo that puts an AI agent's tool server in front of trading data does what its architecture says. Its guardrail held in search but not on a second path to the same data. What it took, what it caught, and what it does not prove.
-date: 2026-10-08
+date: 2026-10-07
 author: OneDroid
 tags: case study, OneDroid Argus, AI agents, architecture, testing
 ---
