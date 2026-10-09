@@ -10,6 +10,10 @@ Giving an AI agent access to business data comes with two promises written on pa
 
 This is a short case study of checking both promises with one test, written for the people who decide whether such a system goes live. The engineers' version, with every check and every table, is on [the case study page](https://onedroid.ai/case-study-finos-calm).
 
+<div style="position:relative;aspect-ratio:1/1;max-width:640px;margin:24px 0"><iframe src="https://www.youtube-nocookie.com/embed/V6SsYw3b9bQ" title="Does the guardrail hold on every path? 7 sealed checks on the FINOS CALM trades demo" loading="lazy" allow="encrypted-media; picture-in-picture; fullscreen" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="position:absolute;inset:0;width:100%;height:100%;border:0"></iframe></div>
+
+The video in 56 seconds, [also on YouTube](https://www.youtube.com/watch?v=V6SsYw3b9bQ).
+
 ## The decision
 
 A team is about to put an AI agent's tool server in front of trading data. Before trusting it, they want three answers: does the running system match its architecture, does the guardrail hold on every path to the data, and can anyone prove later exactly what was tested and what it found?
