@@ -1,7 +1,7 @@
 ---
 title: "Before you add a separate tester to your AI coding agent: what one experiment measured"
 description: A case study for product owners and leaders. The same feature built six times, three by Claude Code checking its own work and three by Claude Code with an independent tester, judged on checks neither had seen. The quality was the same. The agent got cheaper and the whole got dearer. What it cost, what it showed, and what it does not prove.
-date: 2026-10-19
+date: 2026-10-20
 author: OneDroid
 tags: case study, experiment, Claude Code, AI agents, testing
 ---

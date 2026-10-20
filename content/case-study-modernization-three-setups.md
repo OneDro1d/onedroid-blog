@@ -1,7 +1,7 @@
 ---
 title: "Before you modernize legacy code with an AI agent: what the tester checks decides whether it helps"
 description: A case study for product owners and leaders. A decades-old Fortran library ported to Go by Claude Code in three setups and judged on the same hidden checks against the original. A tester pointed at the manual made the port worse; a tester pointed at the original matched the agent alone at 41% less cost. What it cost, what it showed, and what it does not prove.
-date: 2026-10-19
+date: 2026-10-20
 author: OneDroid
 tags: case study, experiment, Claude Code, AI agents, modernization, testing
 ---
