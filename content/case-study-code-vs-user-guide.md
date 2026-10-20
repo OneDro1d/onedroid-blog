@@ -54,4 +54,6 @@ When an AI agent, or anyone, hands you more code than you can read, don't read i
 - prove each check can fail;
 - publish the boundary with the verdict: what was tested, what was not, and what the certificate does not prove.
 
+It solves the problem, and it is affordable. In a separate measured experiment, the independent tester was one session of about $5.30 for a feature the coding agent built at $1.01 to $1.97 a run: [the cost case study](https://onedroid.ai/blog/case-study-claude-code-alone-vs-tester). Independent testing now costs the same order as the AI coding.
+
 That is what OneDroid Argus does. The figures, the method and the limits are on [the case study page](https://onedroid.ai/case-study-code-vs-user-guide), also as a [PDF](https://onedroid.ai/assets/case-studies/onedroid-case-study-code-vs-user-guide.pdf) and a [Word file](https://onedroid.ai/assets/case-studies/onedroid-case-study-code-vs-user-guide.docx).
