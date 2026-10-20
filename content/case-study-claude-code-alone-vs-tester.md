@@ -38,7 +38,7 @@ What it does show is where the money goes. Taking the testing out of the agent h
 
 ## What it cost
 
-Six builds, at list prices for the model, plus one session for the tester. Each build alone took about six minutes. Each build with the tester took about an hour and a half, almost all of it waiting for a person to approve each step. That waiting is why the times cannot be compared. No production system was touched.
+Six builds, at list prices for the model, plus one session for the tester. Times aren't comparable: the tester runs include waiting for human approvals. No production system was touched.
 
 ## What it does not prove
 

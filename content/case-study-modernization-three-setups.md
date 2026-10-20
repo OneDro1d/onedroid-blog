@@ -27,7 +27,7 @@ Every port was then judged on 109 further checks against the original's answers,
 ## What it found
 
 1. **Alone, the agent did well:** 104 of the 109 hidden checks, at $16.92 a run.
-2. **The tester on the manual made the port worse:** 81 of 109. Where the original and its manual differ, the tester reported the original's behaviour as a failure, so the agent "fixed" it. In all three runs it changed one numerical detail the original handles approximately, and that single change moved results everywhere. The port scored better against the manual while drifting away from the system it was meant to replace.
+2. **The tester on the manual made the port worse:** 81 of 109. Where the original and its manual differ, the tester reported the original's behaviour as a failure, so the agent "fixed" it. In all three runs it changed one numerical detail the original handles approximately, which cost 22 to 25 of the 109 hidden checks. The port scored better against the manual while drifting away from the system it was meant to replace.
 3. **The tester on the original matched the agent alone, for much less:** 106 of 109, at $10.04 a run, 41% cheaper than working alone. With "behave like the original" as the test, there was nothing to "fix". The agent only built, ran no tests of its own, and its first port passed.
 
 ## The finding that changes the decision
@@ -36,14 +36,15 @@ A tester checking the wrong thing is worse than no tester. In a modernization, t
 
 ## What it cost
 
-Nine runs of the agent, at its own reported cost, plus the tester's checks, which came from earlier work on the same library and can be reused. Writing those checks is not counted in the cost per run. No production system was touched.
+Nine runs of the agent, at its own reported cost (our sums match Claude Code's own cost figure within 0.11%), plus the tester's checks, which came from earlier work on the same library and can be reused. Writing those checks is not counted in the cost per run. No production system was touched.
 
 ## What it does not prove
 
 - Three runs per setup, on one library.
-- The tester's first round passed, so this does not show the loop repairing a port that started out wrong.
+- B′'s tester passed the first build, so this does not show the loop repairing a port that started out wrong.
 - One rule in the interface could be read two ways. It affects 5 of the hidden checks and explains the small lead of B′ over A. Without them, A and B′ tie at 101 of 104.
-- One safeguard in the building setup was switched off in every B and B′ run because a helper tool was missing.
+- One safeguard in the building setup didn't work in any B or B′ run: it failed open because a helper tool was missing.
+- Both tester setups also ran with our agent rules and an instruction to implement only. The agent working alone had neither.
 - The same team wrote the checks, ran the experiment and wrote this.
 
 This is a record of one experiment. Claude and Claude Code are products of Anthropic, named only to identify what was used. OneDroid is not affiliated with Anthropic.
